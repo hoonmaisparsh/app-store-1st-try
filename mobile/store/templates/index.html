@@ -1,0 +1,86 @@
+<html lang ="en">
+<head>
+	<meta charset ="UTF-8">
+	<meta name="viewport" content="width=device-width ,initial-scale=1.0">
+	<title>IPhone Product Page</title>
+	<style>
+		body{
+			font-family:Arial ,sans-serif;
+			margin: 20px;
+			background-color:#f4f4f4;
+		}
+		h1 {
+			 color: #333;
+		}
+		.container {
+			display : flex;
+			flex-direction : row;
+			flex_wrap: wrap;
+			justify-content: space-between;
+		}
+		.sidebar{
+			width :25%;
+			background:white;
+			padding :15px;
+			border-radius:5px;
+			box-shadow:0 0 10px #ccc;  
+		}
+		.product_list{
+			width:70%;
+			display:flex;
+			flex_direction:column;
+			gap : 20px;
+		}
+		.product{
+			background:white;
+			padding:15px;
+			border-radius:5px;
+			box-shadow:0 0 10px #ccc;
+		}
+		.product img{
+			max-width:100%;
+			height: auto;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>IPhone-Built for Apple Intelligence</h1>
+
+	<div class="container">
+		<div class="sidebar">
+			<h3>Filters</h3>
+			<form>
+				<label for="price">Price:</label><br>
+				<input type="range" id ="price" name="price" min="54" max="153900"><br><br>
+				<input type="checkbox" id="Samsung" name="brand" value="Samsung">Samsung<br>
+				<input type="checkbox" id="Redmi" name="brand" value="Redmi">Redmi<br>
+				<input type="checkbox" id="realme" name="brand" value="realme">realme<br>
+				<input type="checkbox" id="OnePlus" name="brand" value="OnePlus">OnePlus<br>
+				<input type="checkbox" id="Motorola" name="brand" value="Motorola">Motorola<br>
+				<input type="checkbox" id="Poco" name="brand" value="Poco">Poco<br><br>
+				<h4>Storage Capacity:</h4>
+				<input type="checkbox" id="128GB" name="storage" value="128GB">128GB<br>
+				<input type="checkbox" id="256GB" name="storage" value="256GB">256GB<br><br>
+				<button type="submit">Apply Filters</button>
+			</form>
+		</div>
+		<div class="product_list">
+			<div class="product">
+				<h3>IPhone 16 Pro 128 GB</h3>
+				<img src="https://via.placeholder.com/150" alt="IPhone 16 Pro">
+				<p> ₹139,900</p>
+				<p>Camera Control, A18 Chip and a Big Boost in Performance</p>
+				<button> Add to Cart</button>
+			</div>
+			<div class="product">
+				<h3>Redmi Note 14 5G</h3>
+				<img src="https://via.placeholder.com/150" alt="Redmi Note 14">
+				<p> ₹18,999</p>
+				<p> 6GB RAM, 128GB Storage , Segment's Brightest AMOLED</p>
+				<button>Add to Cart</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html> 
