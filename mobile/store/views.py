@@ -6,11 +6,11 @@ from .models import Mobile,Cart
 
 # Create your views here.
 def index(request):
-	return HttpResponse("<h1> App is running </h2>")
+	return HttpResponse("<h1> App is running </h1>")
 
 def home(request):
 	mobiles = Mobile.objects.all()
-	return render(request,'store/home.html',{'mobiles': mobiles})
+	return render(request,'home.html',{'mobiles': mobiles})
 
 def add_to_cart(request,mobile_id):
 	mobile =get_object_or_404(Mobile,id=mobile_id)
@@ -22,5 +22,5 @@ def add_to_cart(request,mobile_id):
 
 def cart_veiw(request):
 	cart_items = Cart.objects.filter(user=request.user.username)
-	return render(request,'store/cart.html',{'cart_items':cart_items})
+	return render(request,'cart.html',{'cart_items':cart_items})
  

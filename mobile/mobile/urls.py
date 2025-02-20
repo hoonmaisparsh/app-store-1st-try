@@ -16,15 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from store import views
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-]
 from django.urls import path
-from . import views
+
 
 urlpatterns=[
-	path('',views.home,name='home'),
+	path('',views.index,name='index'),
+	path("home/", views.home, name="home"),
 	path('cart/', views.cart_view,name='cart'),
 	path('add_to_cart/<int:mobile_id>/',views.add_to_cart,name='add_to_cart'),
 ]
